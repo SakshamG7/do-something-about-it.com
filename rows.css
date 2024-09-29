@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+.row1,
+.row2,
+.row3,
+.row4,
+.row5,
+.row6,
+.row7,
+.row8,
+.row9 {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.row1 {
+  grid-template-columns: auto auto;
+}
+
+/* Apply borders only to the top and left of each grid item */
+.rc1,
+.rc1-2,
+.rc2,
+.rc3,
+.rc4,
+.rc5,
+.rc6,
+.rc7,
+.rc8,
+.rc9,
+.row1 .rc1-2,
+.row2 .rc2,
+.row3 .rc3,
+.row4 .rc4,
+.row5 .rc5,
+.row6 .rc6,
+.row7 .rc7,
+.row8 .rc8,
+.row9 .rc9 {
+  background-color: rgb(0, 200, 255);
+  color: black;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  height: auto;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+/* Remove the right and bottom borders except for the last column and row */
+.row1 > *:nth-last-child(1),
+.row2 > *:nth-last-child(1),
+.row3 > *:nth-last-child(1),
+.row4 > *:nth-last-child(1),
+.row5 > *:nth-last-child(1),
+.row6 > *:nth-last-child(1),
+.row7 > *:nth-last-child(1),
+.row8 > *:nth-last-child(1),
+.row9 > *:nth-last-child(1) {
+  border-right: 1px solid black;
+}
+
+/* Add a bottom border to the last row */
+.row9 {
+  border-bottom: 1px solid black;
+}
+
+.row1 {
+  grid-template-columns: auto;
+}
+/* Adjust for mobile responsiveness */
+@media only screen and (min-width: 1300px) {
+  .row1 .rc1 {
+    border-right: 1px solid black;
+  }
+}
+
+img {
+    max-width: 100%;
+}
