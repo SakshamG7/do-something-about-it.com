@@ -3,20 +3,30 @@ function checkWebPSupport(callback) {
     // Create a canvas element to test WebP support
     const canvas = document.createElement('canvas');
 
-    // Check if the browser can encode an image to WebP format
-    const isWebPSupported = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+    // Try encoding an image to WebP format and check the result
+    const isWebPSupported = canvas.toDataURL('image/webp').startsWith('data:image/webp');
 
     // Call the callback function with the result
     callback(isWebPSupported);
 }
 
-// Define the URL to redirect to if WebP is not supported
-const fallbackURL = 'https://old.do-something-about-it.com';
+// Function to replace all .webp extensions in <img> tags with .jpg
+function replaceWebPWithJpg() {
+    // Get all <img> tags on the page
+    const images = document.querySelectorAll('img');
+
+    // Loop through each image and replace .webp with .jpg in the src attribute
+    images.forEach(img => {
+        if (img.src.endsWith('.webp')) {
+            img.src = img.src.replace('.webp', '.jpg');
+        }
+    });
+}
 
 // Run the WebP support check
 checkWebPSupport(function(isSupported) {
-    // If WebP is not supported, redirect the user to the fallback URL
+    // If WebP is not supported, replace .webp images with .jpg
     if (!isSupported) {
-        window.location.href = fallbackURL;
+        replaceWebPWithJpg();
     }
 });
