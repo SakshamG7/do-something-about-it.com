@@ -1,0 +1,47 @@
+# Block specific web scrapers and AI-related user-agents
+User-agent: OpenAI
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Block other well-known scrapers (you can add more user-agents as needed)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SEMrushBot
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+# Allow all other user-agents access to the site
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+
+# Allow public pages
+Allow: /index.html
+Allow: /About.html
+Allow: /Citations.html
+
+# Disallow access to unnecessary files
+Disallow: /config/
+Disallow: /index.js
+Disallow: /rows.css
+Disallow: /style.css
+
+# Sitemap location
+Sitemap: https://do-something-about-it.com/sitemap.xml
