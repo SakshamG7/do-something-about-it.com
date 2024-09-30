@@ -28,6 +28,7 @@ body {
   margin-top: 6em; /* Add more vertical spacing */
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2rem; /* Add more vertical spacing */
   max-width: 1200px; /* Ensure it doesn’t expand too wide on large screens */
   border-radius: 15px; /* Add rounded corners */
   border: 3px solid black; /* Add border */
