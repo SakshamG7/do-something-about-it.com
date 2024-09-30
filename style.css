@@ -302,7 +302,7 @@ h3 {
 /* Improved Color Contrast for Links */
 a {
   color: #0053AD;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover,
