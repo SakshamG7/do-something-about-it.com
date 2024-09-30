@@ -166,7 +166,7 @@ body {
     url("images/earth banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: calc(100vh - 9rem);
+  min-height: calc(100% - 9rem);
   display: flex;
   justify-content: center;
   align-items: center;
