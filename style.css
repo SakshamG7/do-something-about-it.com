@@ -57,7 +57,7 @@ body {
 
 .citation-link {
   color: #0053AD;
-  text-decoration: none;
+  text-decoration: underline;
   word-break: break-word; /* Ensures long URLs break properly */
 }
 
